@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Cupcakes</title>
+</head>
+<body>
+<div class="container">
+    <div class="row m-3">
+        <div class="col-7 p-3">
+            <h1 class="mb-5 display-4">Our Cupcakes</h2>
+            <div id="all-cupcakes">
+
+            </div>
+        </div>
+
+        <div id="cupcake-form-container" class="col-5 p-5">
+            <h2 class="mb-5 display-6">Add a Cupcake</h2>
+            <form action="" id="add-cupcake-form">
+
+                <div class="mb-4 row">
+                    <label for="flavor_input" class="col-sm-3 col-form-label">Flavor</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="flavor_input">
+                    </div>
+                </div>
+
+                <div class="mb-4 row">
+                    <label for="size_select" class="col-sm-3 col-form-label">Size</label>
+                    <div class="col-sm-9">
+                        <select id="size_select" class="form-select" aria-label="Default select">
+                            <option selected></option>
+                            <option value="mini">Mini</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-4 row">
+                    <label for="rating_range" class="col-sm-3 col-form-label">Rating</label>
+                    <div class="col-sm-9">
+                        <input type="range" name="rating" class="form-range mt-2" min="0" max="10" step="0.5" id="rating">
+                    </div>
+                </div>
+
+                <div class="mb-4 row">
+                    <label for="image_url" class="col-sm-3 col-form-label">Image URL</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="image_url">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Sripts -->
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/cupcakes.js"></script>
+    
+</body>
+</html>

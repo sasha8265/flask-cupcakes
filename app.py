@@ -29,7 +29,7 @@ def list_cupcakes():
 
 
 @app.route('/api/cupcakes/<int:id>')
-def get_cupcake():
+def get_cupcake(id):
     """Get data about a single cupcake"""
 
     cupcake = Cupcake.query.get_or_404(id)
@@ -56,7 +56,7 @@ def create_cupcake():
 
 
 @app.route('/api/cupcakes/<int:id>', methods=['PATCH'])
-def edit_cupcake():
+def edit_cupcake(id):
     """Update a cupcake with the id passed in the URL and data from the body of the request."""
 
     cupcake = Cupcake.query.get_or_404(id)
@@ -73,7 +73,7 @@ def edit_cupcake():
 
 
 @app.route('/api/cupcakes/<int:id>', methods=['DELETE'])
-def delete_cupcake():
+def delete_cupcake(id):
     """Delete cupcake with the id passed in the URL"""
 
     cupcake = Cupcake.query.get_or_404(id)

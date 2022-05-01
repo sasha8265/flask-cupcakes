@@ -19,7 +19,7 @@ class Cupcake(db.Model):
     flavor = db.Column(db.Text, nullable=False)
     size = db.Column(db.Text, nullable=False)
     rating = db.Column(db.Float, nullable=False)
-    image = db.Colum(db.Text, nullable=False, defult=DEFAULT_IMG_URL)
+    image = db.Column(db.Text, nullable=False, default=DEFAULT_IMG_URL)
 
     def serialize(self):
         """Return serialized version of model"""
@@ -33,4 +33,4 @@ class Cupcake(db.Model):
         }
 
     def __repr__(self):
-        return f"<Cupcake {self.id} flavor={self.flavor} size={self.size} rating={self.rating} image={self.iamge}>"
+        return f"<Cupcake {self.id} flavor={self.flavor} size={self.size} rating={self.rating} image={self.image}>"
